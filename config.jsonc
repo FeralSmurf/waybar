@@ -2,7 +2,7 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 20, // Waybar height (to be removed for auto height)
+    "height": 25, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -16,21 +16,23 @@
         "sway/window"
     ],
     "modules-right": [
+        "custom/weather",
         "mpd",
-        "idle_inhibitor",
+        //"idle_inhibitor",
         "pulseaudio",
         "network",
         "power-profiles-daemon",
         "cpu",
         "memory",
-        "temperature",
+        //"temperature",
         "backlight",
         "keyboard-state",
         "sway/language",
         "battery",
         "battery#bat2",
         "clock",
-        "tray",
+        "tray"
+        //"custom/power"
     ],
     // Modules configuration
     // "sway/workspaces": {
@@ -199,24 +201,24 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
-"custom/power": {
-    "format": "⏻ ",
-    "tooltip": false,
-    "menu": "on-click",
-    "menu-file": "$HOME/.config/waybar/power_menu.xml",
-    "menu-actions": {
-        "shutdown": "shutdown",
-        "reboot": "reboot",
-        "suspend": "systemctl suspend",
-        "hibernate": "systemctl hibernate"
-    }
-},
-    "keyboard": {
-        "format": "{layout}",
-        "format-alt": "{variant}",
-        "format-icons": {
-          "us": "US",
-          "ro": "RO",
-    }
-  }
+    "custom/power": {
+        "format" : "⏻ ",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+		"menu-actions": {
+			"shutdown": "shutdown",
+			"reboot": "reboot",
+			"suspend": "systemctl suspend",
+			"hibernate": "systemctl hibernate"
+		}
+    },
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "wttrbar --nerd --custom-indicator \"{areaName}: {FeelsLikeC}°C, {pressure} hPa, {windspeedKmph} km/h, {weatherDesc}\"", 
+        "return-type": "json",
+        "max-length": 80
+    },
 }

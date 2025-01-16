@@ -1,13 +1,17 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-family: DejaVuSansM Nerd Font, FontAwesome, sans-serif;
+    font-size: 14px;
+    font-weight: Bold;
+    border-radius: 4px;
+    padding: 0px;
+    margin: 0px;
 }
 
 window#waybar {
-    background-color: #000000;
-    border-bottom: 0px solid #444444;
-    color: #ffffff;
+    background-color: #2E3440;
+    border-bottom: 0px solid #4C566A;
+    color: #D8DEE9;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -24,31 +28,31 @@ button {
 
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
+    box-shadow: inset 0 -3px #D8DEE9;
 }
 
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #ffffff;
+    color: #D8DEE9;
 }
 
 #workspaces button:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(216, 222, 233, 0.2);
 }
 
 #workspaces button.focused {
-    background-color: #444444;
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: #4C566A;
+    box-shadow: inset 0 -3px #D8DEE9;
 }
 
 #workspaces button.urgent {
-    background-color: #ff0000;
+    background-color: #BF616A;
 }
 
 #mode {
-    background-color: #444444;
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: #4C566A;
+    box-shadow: inset 0 -3px #D8DEE9;
 }
 
 #clock,
@@ -67,27 +71,27 @@ button:hover {
 #power-profiles-daemon,
 #mpd {
     padding: 0 10px;
-    color: #ffffff;
-    background-color: #000000;
+    color: #D8DEE9;
+    background-color: #2E3440;
 }
 
 #clock {
-    background-color: #444444;
+    background-color: #4C566A;
 }
 
 #battery {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #2E3440;
+    color: #D8DEE9;
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #00ff00;
+    color: #D8DEE9;
+    background-color: #A3BE8C;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #ff0000;
-    color: #ffffff;
+    background-color: #BF616A;
+    color: #D8DEE9;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -97,91 +101,91 @@ button:hover {
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: #D8DEE9;
+        color: #2E3440;
     }
 }
 
 #power-profiles-daemon {
-    padding-right: 15px;
+    padding-right: 10px;
 }
 
 #power-profiles-daemon.performance {
-    background-color: #ff0000;
-    color: #ffffff;
+    background-color: #BF616A;
+    color: #D8DEE9;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #444444;
-    color: #ffffff;
+    background-color: #4C566A;
+    color: #D8DEE9;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #00ff00;
-    color: #000000;
+    background-color: #A3BE8C;
+    color: #2E3440;
 }
 
 label:focus {
-    background-color: #444444;
+    background-color: #4C566A;
 }
 
 #cpu {
-    background-color: #444444;
-    color: #ffffff;
+    background-color: #4C566A;
+    color: #D8DEE9;
 }
 
 #memory {
-    background-color: #444444;
-    color: #ffffff;
+    background-color: #4C566A;
+    color: #D8DEE9;
 }
 
 #disk {
-    background-color: #444444;
-    color: #ffffff;
+    background-color: #4C566A;
+    color: #D8DEE9;
 }
 
 #backlight {
-    background-color: #444444;
-    color: #ffffff;
+    background-color: #4C566A;
+    color: #D8DEE9;
 }
 
 #network {
-    background-color: #444444;
-    color: #ffffff;
+    background-color: #4C566A;
+    color: #D8DEE9;
 }
 
 #network.disconnected {
-    background-color: #ff0000;
+    background-color: #BF616A;
 }
 
 #pulseaudio {
-    background-color: #444444;
-    color: #ffffff;
+    background-color: #4C566A;
+    color: #D8DEE9;
 }
 
 #pulseaudio.muted {
-    background-color: #222222;
-    color: #777777;
+    background-color: #3B4252;
+    color: #5E81AC;
 }
 
 #custom-media {
-    background-color: #444444;
-    color: #ffffff;
+    background-color: #4C566A;
+    color: #D8DEE9;
     min-width: 100px;
 }
 
 #temperature {
-    background-color: #444444;
-    color: #ffffff;
+    background-color: #4C566A;
+    color: #D8DEE9;
 }
 
 #temperature.critical {
-    background-color: #ff0000;
+    background-color: #BF616A;
 }
 
 #tray {
-    background-color: #444444;
-    color: #ffffff;
+    background-color: #4C566A;
+    color: #D8DEE9;
 }
 
 #tray > .passive {
@@ -190,47 +194,47 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #ff0000;
+    background-color: #BF616A;
 }
 
 #idle_inhibitor {
-    background-color: #444444;
+    background-color: #4C566A;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #D8DEE9;
+    color: #2E3440;
 }
 
 #mpd {
-    background-color: #444444;
-    color: #ffffff;
+    background-color: #4C566A;
+    color: #D8DEE9;
 }
 
 #mpd.disconnected {
-    background-color: #ff0000;
+    background-color: #BF616A;
 }
 
 #mpd.stopped {
-    background-color: #222222;
+    background-color: #3B4252;
 }
 
 #mpd.paused {
-    background-color: #444444;
+    background-color: #4C566A;
 }
 
 #language {
-    background: #000000;
-    background-color: #444444;
-    color: #ffffff;
+    background: #2E3440;
+    background-color: #4C566A;
+    color: #D8DEE9;
     padding: 0 0px;
     margin: 0 0px;
-    min-width: 16px;
+    min-width: 18px;
 }
 
 #keyboard-state {
-    background: #444444;
-    color: #ffffff;
+    background: #4C566A;
+    color: #D8DEE9;
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
@@ -241,11 +245,11 @@ label:focus {
 }
 
 #keyboard-state > label.locked {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(216, 222, 233, 0.2);
 }
 
 #scratchpad {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(216, 222, 233, 0.2);
 }
 
 #scratchpad.empty {
@@ -258,17 +262,17 @@ label:focus {
 
 #privacy-item {
     padding: 0 5px;
-    color: white;
+    color: #D8DEE9;
 }
 
 #privacy-item.screenshare {
-    background-color: #444444;
+    background-color: #4C566A;
 }
 
 #privacy-item.audio-in {
-    background-color: #444444;
+    background-color: #4C566A;
 }
 
 #privacy-item.audio-out {
-    background-color: #444444;
+    background-color: #4C566A;
 }
