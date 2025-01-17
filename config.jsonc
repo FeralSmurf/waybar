@@ -22,6 +22,7 @@
         "pulseaudio",
         "network",
         "power-profiles-daemon",
+        "disk",
         "cpu",
         "memory",
         //"temperature",
@@ -217,8 +218,13 @@
         "format": "{}",
         "tooltip": true,
         "interval": 3600,
-        "exec": "wttrbar --nerd --custom-indicator \"{areaName}: {FeelsLikeC}°C, {pressure} hPa, {windspeedKmph} km/h, {weatherDesc}\"", 
+        "exec": "wttrbar --nerd --custom-indicator \"{areaName}: ~{FeelsLikeC}°C, {pressure} hPa, {windspeedKmph} km/h, {weatherDesc}\"", 
         "return-type": "json",
         "max-length": 80
     },
+        "disk": {
+            "interval": 30,
+            "format": " {percentage_free}%",
+        }
+    }
 }
