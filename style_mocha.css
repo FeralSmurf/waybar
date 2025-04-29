@@ -1,5 +1,3 @@
-/* Catppuccin-style theme */
-
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: DejaVuSansM Nerd Font, FontAwesome, sans-serif;
@@ -282,12 +280,4 @@ label:focus {
     margin: 0 0px;
     padding: 0 0px;
     color: #CDD6F4; /* Text */
-}
-
-#custom-checkupdates {
-    background: #585B70; /* Surface2 */
-    color: #CDD6F4; /* Text */
-    padding: 0 5px;
-    margin: 0 0px;
-    min-width: 16px;
 }
