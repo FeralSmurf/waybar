@@ -10,29 +10,22 @@
         "sway/workspaces",
         "sway/mode",
         "sway/scratchpad",
-        "custom/media",
-        "sway/window"
+        "sway/window",
     ],
     "modules-center": [
+        "custom/weather",
         "tray"
     ],
     "modules-right": [
-        "custom/weather",
-        "mpd",
         //"idle_inhibitor",
         "pulseaudio",
         "network",
       "custom/checkupdates",
-        "power-profiles-daemon",
         "disk",
         "cpu",
         "memory",
         //"temperature",
-        "backlight",
-        "keyboard-state",
         "sway/language",
-        "battery",
-        "battery#bat2",
         "clock"
         //"custom/power"
     ],  // Modules configuration
@@ -58,7 +51,7 @@
     "format": "{name} {icon}",
     "format-icons": {
       "locked": "",
-      "unlocked": "",
+      "unlocked": ""
     },
   },
   "sway/mode": {
@@ -109,10 +102,10 @@
     "spacing": 10,
   },
 "clock": {
-  // "timezone": "America/New_York",
   "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-  "format-alt": "{:%Y.%m.%d}",
-  },
+  "format": "{:%d %B %H:%M}",
+  "format-alt": "{:%H:%M}"
+},
   "cpu": {
     "format": "{usage}% ",
     "tooltip": false,
@@ -234,7 +227,7 @@
   },
   "return-type": "json",
   "exec": "fish -c 'set count (checkupdates 2>/dev/null | wc -l); or set count 0; echo \"{\\\"text\\\": \\\"$count\\\", \\\"tooltip\\\": \\\"$count updates available\\\", \\\"class\\\": \\\"$(if test $count -gt 0; echo updates-available; else; echo no-updates; end)\\\"}\"'",
-  "interval": 3600,
+  "interval": 600,
   "on-click": "alacritty -e sudo pacman -Syu",
   "tooltip": true
 },

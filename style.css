@@ -2,7 +2,7 @@
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: DejaVuSansM Nerd Font, FontAwesome, sans-serif;
+    font-family: NotoSans Nerd, FontAwesome, sans-serif;
     font-size: 14px;
     font-weight: Bold;
     border-radius: 4px;
@@ -79,6 +79,7 @@ button:hover {
 
 #clock {
     background-color: #585B70; /* Surface2 */
+    padding: 3 3px;
 }
 
 #battery {
@@ -99,6 +100,10 @@ button:hover {
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+#window {
+	padding: 5px;
 }
 
 @keyframes blink {
@@ -228,7 +233,7 @@ label:focus {
     background: #1E1E2E; /* Base */
     background-color: #585B70; /* Surface2 */
     color: #CDD6F4; /* Text */
-    padding: 0 0px;
+    padding: 3 3px;
     margin: 0 0px;
     min-width: 18px;
 }
