@@ -103,7 +103,7 @@
   },
 "clock": {
   "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-  "format": "{:%d %B %H:%M}",
+  "format": "{:%a %d %B %H:%M}",
   "format-alt": "{:%H:%M}"
 },
   "cpu": {
@@ -227,7 +227,7 @@
   },
   "return-type": "json",
   "exec": "fish -c 'set count (checkupdates 2>/dev/null | wc -l); or set count 0; echo \"{\\\"text\\\": \\\"$count\\\", \\\"tooltip\\\": \\\"$count updates available\\\", \\\"class\\\": \\\"$(if test $count -gt 0; echo updates-available; else; echo no-updates; end)\\\"}\"'",
-  "interval": 600,
+  "interval": 300,
   "on-click": "alacritty -e sudo pacman -Syu",
   "tooltip": true
 },
